@@ -121,3 +121,62 @@ const sameFrequency = (arr1, arr2) => {
 };
 
 console.log(sameFrequency(arr1_withoutsqrt, arr2_withsqrt));
+
+// Given two strings. Find if one string can be formed by rearranging the letters of other string.
+const str1Arrange = "listen";
+const str2Arrange = "silent";
+if (str1Arrange.length !== str2Arrange.length) return false;
+const str1Obj = str1Arrange.split("").sort().join("");
+const str2Obj = str2Arrange.split("").sort().join("");
+console.log("Two strings are: ", str1Obj === str2Obj ? true : false);
+
+// Write a JavaScript program to find the maximum number in an array.
+const max_num_arr = [2, 45, 22, 43, 89, 3, 22, 45, 89];
+let maxNum = 0;
+for (let i = 0; i < max_num_arr.length; i++) {
+  if (max_num_arr[i] > maxNum) {
+    maxNum = max_num_arr[i];
+  }
+}
+console.log("Maximum number in the array is: ", maxNum);
+
+// Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+const numArr = [2, 5, 6, 7, 4, 44, 35, 22, 88, 56];
+let evenNum = [];
+const findEvenNum = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) evenNum.push(arr[i]);
+  }
+  evenNum.sort((a, b) => a - b);
+  return evenNum;
+};
+
+console.log("Even numbers are:", findEvenNum(numArr));
+
+// Write a JavaScript function to check if a given number is prime.
+const primeNum = 43;
+const checkPrime = (num) => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+console.log(primeNum, "is prime number: ", checkPrime(primeNum));
+
+// Write a JavaScript program to find the largest element in a nested array. [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
+const nestedArr = [
+  [3, 4, 58],
+  [709, 8, 9, [10, 11]],
+  [111, 2],
+];
+const flatenArr = nestedArr.flat(Infinity);
+let largestNum = flatenArr[0];
+for (let i = 0; i < flatenArr.length; i++) {
+  if (flatenArr[i] > largestNum) {
+    largestNum = flatenArr[i];
+  }
+}
+console.log(largestNum, " is the largest Number in the nested array.");

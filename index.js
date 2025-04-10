@@ -83,3 +83,11 @@ for (i = n; i >= 1; i--) {
   fact *= i;
 }
 console.log("Factorial is: ", fact);
+
+// Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31]
+const arr1 = [0, 3, 4, 31];
+const arr2 = [4, 6, 30];
+const mergedArr = arr1.concat(arr2);
+console.log(mergedArr);
+let sortedArr = mergedArr.sort((a, b) => a - b);
+console.log(sortedArr);

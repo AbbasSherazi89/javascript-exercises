@@ -91,3 +91,33 @@ const mergedArr = arr1.concat(arr2);
 console.log(mergedArr);
 let sortedArr = mergedArr.sort((a, b) => a - b);
 console.log(sortedArr);
+
+// Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same.
+
+const arr1_withoutsqrt = [1, 2, 3, 4, 5];
+const arr2_withsqrt = [1, 4, 4, 16, 25];
+
+const sameFrequency = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  // Approach 1
+  for (let i = 0; i < arr1.length; i++) {
+    let num = arr1[i];
+    let square = arr2[i];
+    if (num * num !== square) {
+      return false;
+    }
+  }
+  // Aproach 2
+  // for (let i = 0; i < arr1.length; i++) {
+  //   let sqrtArrayIndex = arr2.indexOf(arr1[i] * arr1[i]);
+  //   if (sqrtArrayIndex === -1) {
+  //     return false;
+  //   }
+  //   arr2.splice(sqrtArrayIndex, 1);
+  // }
+  return true;
+};
+
+console.log(sameFrequency(arr1_withoutsqrt, arr2_withsqrt));

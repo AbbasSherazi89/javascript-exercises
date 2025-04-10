@@ -121,3 +121,21 @@ const sameFrequency = (arr1, arr2) => {
 };
 
 console.log(sameFrequency(arr1_withoutsqrt, arr2_withsqrt));
+
+// Given two strings. Find if one string can be formed by rearranging the letters of other string.
+const str1Arrange = "listen";
+const str2Arrange = "silent";
+if (str1Arrange.length !== str2Arrange.length) return false;
+const str1Obj = str1Arrange.split("").sort().join("");
+const str2Obj = str2Arrange.split("").sort().join("");
+console.log("Two strings are: ", str1Obj === str2Obj ? true : false);
+
+// Write a JavaScript program to find the maximum number in an array.
+const max_num_arr = [2, 45, 22, 43, 89, 3, 22, 45, 89];
+let maxNum = 0;
+for (let i = 0; i < max_num_arr.length; i++) {
+  if (max_num_arr[i] > maxNum) {
+    maxNum = max_num_arr[i];
+  }
+}
+console.log("Maximum number in the array is: ", maxNum);

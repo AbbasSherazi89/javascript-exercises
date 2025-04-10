@@ -64,3 +64,14 @@ for (let i = arrTorevers.length - 1; i >= 0; i--) {
   reverseArray.push(arrTorevers[i]);
 }
 console.log("Revers of the array is: ", reverseArray);
+
+// Find the max count of consecutive 1’s in an array
+const arrOnes = [1, 2, 2, 3, 1, 1, 1, 2, 8, 8, 1, 1, 7, 2, 3, 1, 1, 1, 1];
+console.log(arrOnes);
+let maxCount = 0;
+for (let i = 0; i < arrOnes.length; i++) {
+  if (arrOnes[i] === 1 && arrOnes[i + 1] === 1) {
+    maxCount += 1;
+  }
+}
+console.log("Max consecutive one's are:", maxCount);

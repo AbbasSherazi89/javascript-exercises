@@ -165,3 +165,18 @@ const checkPrime = (num) => {
   return true;
 };
 console.log(primeNum, "is prime number: ", checkPrime(primeNum));
+
+// Write a JavaScript program to find the largest element in a nested array. [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
+const nestedArr = [
+  [3, 4, 58],
+  [709, 8, 9, [10, 11]],
+  [111, 2],
+];
+const flatenArr = nestedArr.flat(Infinity);
+let largestNum = flatenArr[0];
+for (let i = 0; i < flatenArr.length; i++) {
+  if (flatenArr[i] > largestNum) {
+    largestNum = flatenArr[i];
+  }
+}
+console.log(largestNum, " is the largest Number in the nested array.");

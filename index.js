@@ -56,3 +56,11 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(uniqueArr);
+
+//  Program to find Reverse of an array without using built-in method ?
+const arrTorevers = ["A", "blessing", "in", "disguise"];
+let reverseArray = [];
+for (let i = arrTorevers.length - 1; i >= 0; i--) {
+  reverseArray.push(arrTorevers[i]);
+}
+console.log("Revers of the array is: ", reverseArray);

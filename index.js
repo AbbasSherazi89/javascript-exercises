@@ -75,3 +75,11 @@ for (let i = 0; i < arrOnes.length; i++) {
   }
 }
 console.log("Max consecutive one's are:", maxCount);
+
+//Find the factorial of given number
+let n = 5;
+let fact = 1;
+for (i = n; i >= 1; i--) {
+  fact *= i;
+}
+console.log("Factorial is: ", fact);

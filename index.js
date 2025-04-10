@@ -139,3 +139,16 @@ for (let i = 0; i < max_num_arr.length; i++) {
   }
 }
 console.log("Maximum number in the array is: ", maxNum);
+
+// Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+const numArr = [2, 5, 6, 7, 4, 44, 35, 22, 88, 56];
+let evenNum = [];
+const findEvenNum = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) evenNum.push(arr[i]);
+  }
+  evenNum.sort((a, b) => a - b);
+  return evenNum;
+};
+
+console.log("Even numbers are:", findEvenNum(numArr));

@@ -191,3 +191,21 @@ const findFibSeries = (num) => {
   return fiboArr;
 };
 console.log(findFibSeries(fiboNum));
+
+// Given a string, write a javascript function to count the occurrences of each character in the string.
+const occString = "hello world";
+let concatString = occString.split(" ").join("");
+let occObj = {};
+for (let i = 0; i < concatString.length; i++) {
+  let char = concatString[i].toLowerCase();
+  if (occObj[char]) occObj[char]++;
+  else occObj[char] = 1;
+}
+// sort the object by value in ascending order and convert it to array
+// const sortedobj = Object.entries(occObj).sort((a, b) => a[1] - b[1]);
+// sort the object by value in ascending order and convert it back to object
+const sortedObj = Object.fromEntries(
+  Object.entries(occObj).sort((a, b) => a[1] - b[1])
+);
+
+console.log("occurrences of each character in the string: ", sortedObj);

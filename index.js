@@ -209,3 +209,13 @@ const sortedObj = Object.fromEntries(
 );
 
 console.log("occurrences of each character in the string: ", sortedObj);
+
+// Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
+const normalSent = "A quick fox jump over the lazy dog.";
+let splitSent = normalSent.split(" ");
+let stringToReverse = [];
+for (let i = splitSent.length - 1; i >= 0; i--) {
+  stringToReverse.push(splitSent[i]);
+}
+let arrtp_string = stringToReverse.toString().replace(/,/g, " ");
+console.log("Reverse string is: ", arrtp_string);

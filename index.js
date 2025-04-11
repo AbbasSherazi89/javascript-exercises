@@ -180,3 +180,42 @@ for (let i = 0; i < flatenArr.length; i++) {
   }
 }
 console.log(largestNum, " is the largest Number in the nested array.");
+
+// Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
+const fiboNum = 10;
+let fiboArr = [0, 1];
+const findFibSeries = (num) => {
+  for (let i = 2; i < num; i++) {
+    fiboArr[i] = fiboArr[i - 1] + fiboArr[i - 2];
+  }
+  return fiboArr;
+};
+console.log(findFibSeries(fiboNum));
+
+// Given a string, write a javascript function to count the occurrences of each character in the string.
+const occString = "hello world";
+let concatString = occString.split(" ").join("");
+let occObj = {};
+for (let i = 0; i < concatString.length; i++) {
+  let char = concatString[i].toLowerCase();
+  if (occObj[char]) occObj[char]++;
+  else occObj[char] = 1;
+}
+// sort the object by value in ascending order and convert it to array
+// const sortedobj = Object.entries(occObj).sort((a, b) => a[1] - b[1]);
+// sort the object by value in ascending order and convert it back to object
+const sortedObj = Object.fromEntries(
+  Object.entries(occObj).sort((a, b) => a[1] - b[1])
+);
+
+console.log("occurrences of each character in the string: ", sortedObj);
+
+// Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
+const normalSent = "A quick fox jump over the lazy dog.";
+let splitSent = normalSent.split(" ");
+let stringToReverse = [];
+for (let i = splitSent.length - 1; i >= 0; i--) {
+  stringToReverse.push(splitSent[i]);
+}
+let arrtp_string = stringToReverse.toString().replace(/,/g, " ");
+console.log("Reverse string is: ", arrtp_string);

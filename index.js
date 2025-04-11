@@ -180,3 +180,14 @@ for (let i = 0; i < flatenArr.length; i++) {
   }
 }
 console.log(largestNum, " is the largest Number in the nested array.");
+
+// Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
+const fiboNum = 10;
+let fiboArr = [0, 1];
+const findFibSeries = (num) => {
+  for (let i = 2; i < num; i++) {
+    fiboArr[i] = fiboArr[i - 1] + fiboArr[i - 2];
+  }
+  return fiboArr;
+};
+console.log(findFibSeries(fiboNum));

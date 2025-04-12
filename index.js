@@ -219,3 +219,13 @@ for (let i = splitSent.length - 1; i >= 0; i--) {
 }
 let arrtp_string = stringToReverse.toString().replace(/,/g, " ");
 console.log("Reverse string is: ", arrtp_string);
+
+// Greatest number in an array:
+const numArray = [23, 45, 22, 12, 55, 44, 34, 78, 43, 78];
+let maximumNum = numArray[0];
+for (let i = 0; i < numArray.length; i++) {
+  if (numArray[i] > maximumNum) {
+    maximumNum = numArray[i];
+  }
+}
+console.log("Maximum no: ", maximumNum);

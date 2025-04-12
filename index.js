@@ -229,3 +229,20 @@ for (let i = 0; i < numArray.length; i++) {
   }
 }
 console.log("Maximum no: ", maximumNum);
+
+// Second largest number in an array:
+const numArray2 = [23, 45, 22, 12, 55, 44, 34, 88, 43, 77];
+
+let max = -Infinity;
+let secondMax = -Infinity;
+
+for (let num of numArray2) {
+  if (num > max) {
+    secondMax = max;
+    max = num;
+  } else if (num > secondMax && num < max) {
+    secondMax = num;
+  }
+}
+
+console.log("Second largest num in array is:", secondMax);

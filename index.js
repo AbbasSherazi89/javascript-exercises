@@ -256,3 +256,8 @@ for (let i = 1; i <= 5; i++) {
 let randomNumber = Math.floor(Math.random() * 10) + 1;
 
 console.log("Random no between 1 and 10: ", randomNumber);
+
+// Print Squares
+for (let i = 1; i <= 5; i++) {
+  console.log(i * i);
+}

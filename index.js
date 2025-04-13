@@ -246,3 +246,13 @@ for (let num of numArray2) {
 }
 
 console.log("Second largest num in array is:", secondMax);
+
+// Print 1 to 5
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+// Guess the Output
+let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+console.log("Random no between 1 and 10: ", randomNumber);

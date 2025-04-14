@@ -261,3 +261,13 @@ console.log("Random no between 1 and 10: ", randomNumber);
 for (let i = 1; i <= 5; i++) {
   console.log(i * i);
 }
+
+// Print Squares of even numbers
+const sqrArr = [23, 44, 3, 6, 11, 4];
+let newArr = [];
+for (let i = 0; i < sqrArr.length; i++) {
+  if (sqrArr[i] % 2 == 0) {
+    newArr.push(sqrArr[i] * sqrArr[i]);
+  }
+}
+console.log("Squares of even numbers: ", newArr);

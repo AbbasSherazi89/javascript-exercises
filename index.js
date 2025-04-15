@@ -274,14 +274,18 @@ console.log("Squares of even numbers: ", newArr);
 
 // Print smallest number among 3 numbers
 const n1 = 4;
-const n2 = 2;
+const n2 = 78;
 const n3 = 5;
 let smallestNumber;
-if (n1 < n2 && n1 < n3) {
-  smallestNumber = n1;
-} else if (n2 < n1 && n2 < n3) {
-  smallestNumber = n2;
-} else if (n3 < n1 && n3 < n2) {
-  smallestNumber = n3;
+if (typeof n1 == "number" && typeof n2 == "number" && typeof n3 == "number") {
+  if (n1 < n2 && n1 < n3) {
+    smallestNumber = n1;
+  } else if (n2 < n1 && n2 < n3) {
+    smallestNumber = n2;
+  } else if (n3 < n1 && n3 < n2) {
+    smallestNumber = n3;
+  }
+  console.log("Smallest number among three numbers are:", smallestNumber);
+} else {
+  console.log("Please enter valid numbers.");
 }
-console.log("Smallest number among three numbers are:", smallestNumber);

@@ -289,3 +289,16 @@ if (typeof n1 == "number" && typeof n2 == "number" && typeof n3 == "number") {
 } else {
   console.log("Please enter valid numbers.");
 }
+
+// Function that returns a reverse of a string
+const reversOfString = (str) => {
+  newStr = "";
+  if (typeof str !== "string") {
+    throw new Error("Only strings allowed.");
+  }
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  return newStr;
+};
+console.log("Reverse string is: ", reversOfString("1235683"));

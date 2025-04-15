@@ -125,7 +125,7 @@ console.log(sameFrequency(arr1_withoutsqrt, arr2_withsqrt));
 // Given two strings. Find if one string can be formed by rearranging the letters of other string.
 const str1Arrange = "listen";
 const str2Arrange = "silent";
-if (str1Arrange.length !== str2Arrange.length) return false;
+if (str1Arrange.length !== str2Arrange.length) console.log("Not equal");
 const str1Obj = str1Arrange.split("").sort().join("");
 const str2Obj = str2Arrange.split("").sort().join("");
 console.log("Two strings are: ", str1Obj === str2Obj ? true : false);
@@ -271,3 +271,17 @@ for (let i = 0; i < sqrArr.length; i++) {
   }
 }
 console.log("Squares of even numbers: ", newArr);
+
+// Print smallest number among 3 numbers
+const n1 = 4;
+const n2 = 2;
+const n3 = 5;
+let smallestNumber;
+if (n1 < n2 && n1 < n3) {
+  smallestNumber = n1;
+} else if (n2 < n1 && n2 < n3) {
+  smallestNumber = n2;
+} else if (n3 < n1 && n3 < n2) {
+  smallestNumber = n3;
+}
+console.log("Smallest number among three numbers are:", smallestNumber);

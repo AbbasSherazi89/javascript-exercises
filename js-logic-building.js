@@ -8,3 +8,5 @@ const factorialOfnum = (num) => {
   return fact;
 };
 console.log(factorialOfnum(5));
+
+console.log("Just a commit to check the git flow");

@@ -102,21 +102,21 @@ const sameFrequency = (arr1, arr2) => {
     return false;
   }
   // Approach 1
-  for (let i = 0; i < arr1.length; i++) {
-    let num = arr1[i];
-    let square = arr2[i];
-    if (num * num !== square) {
-      return false;
-    }
-  }
-  // Aproach 2
   // for (let i = 0; i < arr1.length; i++) {
-  //   let sqrtArrayIndex = arr2.indexOf(arr1[i] * arr1[i]);
-  //   if (sqrtArrayIndex === -1) {
+  //   let num = arr1[i];
+  //   let square = arr2[i];
+  //   if (num * num !== square) {
   //     return false;
   //   }
-  //   arr2.splice(sqrtArrayIndex, 1);
   // }
+  // Aproach 2
+  for (let i = 0; i < arr1.length; i++) {
+    let sqrtArrayIndex = arr2.indexOf(arr1[i] * arr1[i]);
+    if (sqrtArrayIndex === -1) {
+      return false;
+    }
+    arr2.splice(sqrtArrayIndex, 1);
+  }
   return true;
 };
 

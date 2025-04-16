@@ -9,4 +9,4 @@ const factorialOfnum = (num) => {
 };
 console.log(factorialOfnum(5));
 
-console.log("Just a commits flow");
+console.log("Just a commits a flow");

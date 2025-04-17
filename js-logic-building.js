@@ -42,3 +42,24 @@ const toCheckVowel=(str)=>{
   return countVow;
 }
 console.log('No of vowels in the given string are: ', toCheckVowel(strVow));
+
+// Capitalize the first letter of each word in a sentence.
+const egString="Barking over the wrong tree";
+let splittedStr=egString.split(" ");
+let firstWordCamel='';
+for (let i=0; i<splittedStr.length; i++){
+  firstWordCamel += splittedStr[i][0].toUpperCase() + splittedStr[i].slice(1) + ' '
+}
+console.log(firstWordCamel);
+
+// Find the longest word in a sentence.
+const normalStr="In the middle of difficulty lies opportunity";
+let splitStr=normalStr.split(" ");
+let longWord='';
+for (let i=0; i<splitStr.length; i++){
+  if (splitStr[i].length>longWord.length)
+  {
+    longWord=splitStr[i];
+  }
+}
+console.log("Longest word is ", longWord, " and it's length is ", longWord.length);

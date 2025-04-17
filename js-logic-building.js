@@ -28,3 +28,17 @@ const findPalindrome=(word)=>{
   }
 }
 console.log(findPalindrome(str));
+
+// Count the number of vowels in a string.
+let strVow="Hello world";
+let countVow=0;
+const toCheckVowel=(str)=>{
+  let strToLower=str.toLowerCase();
+  for(let i=0; i<strToLower.length; i++){
+    if (strToLower[i]=='a' || strToLower[i]=='e'|| strToLower[i]=='i' || strToLower[i]=='o' || strToLower[i]=='u'){
+      countVow++;
+    }
+  }
+  return countVow;
+}
+console.log('No of vowels in the given string are: ', toCheckVowel(strVow));

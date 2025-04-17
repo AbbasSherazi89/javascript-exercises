@@ -9,4 +9,9 @@ const factorialOfnum = (num) => {
 };
 console.log(factorialOfnum(5));
 
-console.log("Just a commits a flow");
+// Find a maximum number in an array
+const findMaxNum=(arr)=>{
+  return Math.max(...arr);
+}
+
+console.log("Maximum number in the array is: ", findMaxNum([23,44,33,90,44,33,22,3,87]));

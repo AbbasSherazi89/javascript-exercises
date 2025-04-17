@@ -63,3 +63,52 @@ for (let i=0; i<splitStr.length; i++){
   }
 }
 console.log("Longest word is ", longWord, " and it's length is ", longWord.length);
+
+// Find the maximum and minimum numbers in an array.
+const arrayN=[22,5,34,12,23,11,87,99];
+let min=arrayN[0];
+let max=arrayN[0];
+for (let i=0; i<arrayN.length; i++){
+  if (arrayN[i]<min)
+  {
+    min=arrayN[i];
+  }else if (arrayN[i]>max){
+    max=arrayN[i];
+  }
+}
+console.log("Minimum number in array is:", min, "Maximum number in array is:", max);
+
+
+// Remove duplicates from an array.
+const norArr=[23,33,22,23,33,33,45,2,31,56];
+let uniqueArr=[];
+for (let i=0; i<norArr.length; i++){
+  if (!uniqueArr.includes(norArr[i]))
+  {uniqueArr.push(norArr[i])}
+}
+
+console.log("Array with duplicated values:", norArr);
+console.log("Unique Array is:", uniqueArr.sort((a,b)=>b-a));
+
+// Find the sum of all elements in an array.
+const arr=[23,33,22,23,33,33,45,2,31,56];
+let sum=0;
+for (let i=0; i<arr.length; i++){
+  sum+=arr[i];
+}
+console.log("Sum of all the elements in array is: ", sum);
+
+// Count how many times each element appears in an array.
+const arr1 = [4, 2, 4, 3, 2, 1, 4, 2, 3, 1, 5];
+const countMap = {};
+
+for (let i = 0; i < arr1.length; i++) {
+  const num = arr1[i];
+  if (countMap[num]) {
+    countMap[num]++;
+  } else {
+    countMap[num] = 1;
+  }
+}
+
+console.log("Element counts:", countMap);

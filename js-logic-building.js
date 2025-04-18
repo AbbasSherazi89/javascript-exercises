@@ -112,3 +112,21 @@ for (let i = 0; i < arr1.length; i++) {
 }
 
 console.log("Element counts:", countMap);
+
+// Replace all spaces with hyphens in a string.
+const strToReplace="In the middle of difficulty lies opportunity";
+let replacedStr=strToReplace.split(" ").join("_");
+console.log(replacedStr);
+
+// Count how many times a specific character appears using above string strToReplace.
+let countObj={};
+for (let i=0; i<strToReplace.length; i++){
+  const num=strToReplace[i];
+  if (countObj[num]){
+    countObj[num]++;
+  }else{
+      countObj[num]=1;
+  }
+}
+console.log(countObj);
+

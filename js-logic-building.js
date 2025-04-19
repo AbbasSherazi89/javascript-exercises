@@ -130,3 +130,11 @@ for (let i=0; i<strToReplace.length; i++){
 }
 console.log(countObj);
 
+// Convert a sentence to title case (like a book title).
+const strToTitle="In the middle of difficulty lies opportunity";
+let splitString=strToTitle.split(" ");
+let newStr='';
+for (let i=0; i<splitString.length; i++){
+  newStr+=splitString[i][0].toUpperCase()+splitString[i].slice(1)+' ';
+}
+console.log(newStr);
